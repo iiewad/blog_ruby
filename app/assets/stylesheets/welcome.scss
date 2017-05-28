@@ -1,3 +1,37 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$images: ('https://s3-us-west-2.amazonaws.com/s.cdpn.io/55764/me-sketch-no-fill.png');
+$logo: ('https://www.ruby-lang.org/images/header-ruby-logo.png');
+
+$img: nth($images, random(length($images)));
+
+body {
+	background: url($img) top center no-repeat;
+}
+
+.main {
+	height: 100px;
+	text-align: center;
+	margin-top: 25%;
+}
+
+.main .logo a{
+	display: block;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 40%;
+	background: url($logo) center no-repeat;
+}
+
+.main .text {
+	height: 100px;
+	float: left;
+	line-height: 100px;
+}
+
+.main .text h1 {
+	line-height: 60px;
+}
